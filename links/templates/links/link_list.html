@@ -1,0 +1,13 @@
+{% extends 'links/base.html' %}
+
+<p>
+{% block content %}
+    {% for link in links %}
+        <div>
+            <h1><a href="">{{ link.title }}</a></h1>
+            <p>{{ link.text|linebreaksbr }}</p>
+            <small>added: {{ link.created_date }}</small>
+        </div>
+    {% endfor %}
+{% endblock %}
+</p>
