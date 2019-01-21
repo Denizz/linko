@@ -1,3 +1,8 @@
 p {
     font: darkblue;
 }
+
+.links-tab {
+    border: dotted lightblue 1px;
+
+}

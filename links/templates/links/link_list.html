@@ -1,13 +1,18 @@
 {% extends 'links/base.html' %}
 
-<p>
+
 {% block content %}
+{% if user.is_authenticated %}
+<div class="container">
     {% for link in links %}
-        <div>
-            <h1><a href="">{{ link.title }}</a></h1>
-            <p>{{ link.text|linebreaksbr }}</p>
+        <div class="links-tab">
+            <h4><a href={{ link.text }} target="_blank"> {{ link.title }}</a></h4>
+            <p>(текст ссылки: {{link.text}})</p>
             <small>added: {{ link.created_date }}</small>
         </div>
     {% endfor %}
+</div>
+{%else %}
+<h3>Авторизируйтесь, чтобы пользоваться сайтом.</h3>
+{% endif %}
 {% endblock %}
-</p>

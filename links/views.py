@@ -12,3 +12,6 @@ def index(request):
 def link_list(request):
     links = Link.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
     return TemplateResponse(request, 'links/link_list.html', {'links': links })
+
+def userpage(request):
+    return TemplateResponse(request, 'links/userpage.html', {})
