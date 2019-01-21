@@ -10,7 +10,23 @@
 
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
+<div class="header">
+    {% if user.is_authenticated %}
+    <p>Добро пожаловать, {{user }}!    <a href="#">Выйти</a></p>
+
+    {% endif %}
+
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4"><p>Поиск по #хештегам</p></div>
+        <div class="col-sm-4">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="col-sm-4">Реклама</div>
+
+</div>
 </body>
 </html>

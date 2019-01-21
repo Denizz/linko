@@ -15,3 +15,6 @@ def link_list(request):
 
 def userpage(request):
     return TemplateResponse(request, 'links/userpage.html', {})
+
+def add(request):
+    return TemplateResponse(request, 'links/add_link.html', {})

@@ -3,7 +3,9 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-<div class="container">
+<div class="content">
+    <a href=#>Добавить</a>
+
     {% for link in links %}
         <div class="links-tab">
             <h4><a href={{ link.text }} target="_blank"> {{ link.title }}</a></h4>
