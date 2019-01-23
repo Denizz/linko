@@ -1,9 +1,14 @@
 from django import forms
 
-from .models import Link
+class LinkForm(forms.Form):
+    title = forms.CharField(label='Название для линка', required=False)
+    url = forms.URLField(label='Адрес линка', required=True)
+    tags = forms.CharField(label='Теги (разделить пробелом)',required=False)
 
-class LinkForm(forms.ModelForm):
 
-    class Meta:
-        model = Link
-        fields = ('title', 'text',)
+class LoginForm(forms.Form):
+    username = forms.URLField(label='Логин', required=True)
+    password = forms.CharField(label='Пароль',required=True)
+
+
+

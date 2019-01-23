@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<p>Добавить линк в коллекцию.</p>
-
-</body>
-</html>
+{% extends 'links/base.html' %}
+{% block content %}
+<h4>Добавить линк в коллекцию:</h4>
+    <form method="POST" class="link-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

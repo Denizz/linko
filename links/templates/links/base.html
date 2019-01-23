@@ -12,7 +12,7 @@
 <body>
 <div class="header">
     {% if user.is_authenticated %}
-    <p>Добро пожаловать, {{user }}!    <a href="#">Выйти</a></p>
+    <p>Добро пожаловать, {{user }}!    <a href="{% url 'logout' %}">Выйти</a></p>
 
     {% endif %}
 
@@ -20,7 +20,13 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-sm-4"><p>Поиск по #хештегам</p></div>
+        <div class="col-sm-4">
+            <p>Поиск по #хештегам</p>
+            <p>Поле для формы</p>
+            <p>список по категориям</p>
+
+
+        </div>
         <div class="col-sm-4">
             {% block content %}
             {% endblock %}

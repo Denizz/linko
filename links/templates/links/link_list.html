@@ -4,13 +4,14 @@
 {% block content %}
 {% if user.is_authenticated %}
 <div class="content">
-    <a href=#>Добавить</a>
+    <a href="{% url 'add' %}">Добавить</a>
 
     {% for link in links %}
         <div class="links-tab">
             <h4><a href={{ link.text }} target="_blank"> {{ link.title }}</a></h4>
             <p>(текст ссылки: {{link.text}})</p>
-            <small>added: {{ link.created_date }}</small>
+            <small>добавлена: {{ link.created_date }}</small>
+            <small><a href="{% url 'remove' %}">Удалить</a></small>
         </div>
     {% endfor %}
 </div>
