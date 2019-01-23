@@ -7,8 +7,8 @@ class LinkForm(forms.Form):
 
 
 class LoginForm(forms.Form):
-    username = forms.URLField(label='Логин', required=True)
-    password = forms.CharField(label='Пароль',required=True)
+    username = forms.CharField(label='Логин', required=True)
+    password = forms.CharField(label='Пароль', required=True, widget=forms.PasswordInput)
 
 
 
