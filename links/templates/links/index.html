@@ -7,7 +7,7 @@
     <a href="{% url 'newuser' %}">Зарегистрироваться</a>
 
     <h2>Или войдите, используя свой логин или пароль</h2>
-    <form method="POST" class="login-form">{% csrf_token %}
+    <form method="POST" action="{% url 'login' %}"  class="login-form">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="login btn btn-default">Войти</button>
     </form>

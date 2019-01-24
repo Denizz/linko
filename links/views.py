@@ -24,6 +24,10 @@ def add(request):
 def logout(request):
     logout(request)
 
+def login(request):
+
+    login(request)
+
 def remove(request):
     print("gone")
     return TemplateResponse(request, 'links/remove_link.html', {})
