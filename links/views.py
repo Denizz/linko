@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.template.response import TemplateResponse
 from django.utils import timezone
 from .forms import LinkForm, LoginForm
@@ -18,8 +19,16 @@ def userpage(request):
     return TemplateResponse(request, 'links/userpage.html', {})
 
 def add(request):
-    form = LinkForm()
-    return TemplateResponse(request, 'links/add_link.html', {'form': form})
+    if request.method == "POST":
+        form = LinkForm(request.POST)
+        if form.is_valid():
+            print("chek and get")
+            new_link = Link(author=request.user, title=form.cleaned_data['title'], taglist = form.cleaned_data['tags'], text=form.cleaned_data['url'], created_date=timezone.now())
+            new_link.save()
+            return HttpResponse("Запись добавлена в базу данных <a href=''>Вернуться</a>")
+    else:
+        form = LinkForm()
+        return TemplateResponse(request, 'links/add_link.html', {'form': form})
 
 def logout(request):
     logout(request)
