@@ -1,17 +1,26 @@
 {% extends 'links/base.html' %}
 {% block content %}
-<div class="content">{% if user.is_authenticated %}
-<p>Добро пожаловать, {{user}}!</p>
-{% else %}
-<h3>Зарегистрируйтесь, чтобы продолжить</h3>
-    <a href="{% url 'newuser' %}">Зарегистрироваться</a>
-
-    <h2>Или войдите, используя свой логин или пароль</h2>
-    <form method="POST" action="{% url 'login' %}"  class="login-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="login btn btn-default">Войти</button>
-    </form>
-
-    {% endif %}
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-4">
+                <p>Поиск по #хештегам</p>
+                <p>Поле для формы</p>
+                <p>список по категориям</p>
+                <a href="{% url 'list' %}">Показать все</a>
+            </div>
+            <div class="col-sm-4">
+                {% if user.is_authenticated %}
+                <p>Добро пожаловать, {{user}}!</p>
+                {% else %}
+                <h3>Зарегистрируйтесь, чтобы продолжить</h3>
+                <a href="{% url 'signup' %}">Зарегистрироваться</a>
+                <h2>Или войдите, используя свой логин или пароль</h2>
+                <a href="{% url 'login' %}">Войти</a>
+                {% endif %}
+            </div>
+            <div class="col-sm-4">Реклама</div>
+        </div>
+    </div>
 </div>
 {% endblock %}

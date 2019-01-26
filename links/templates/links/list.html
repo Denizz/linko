@@ -3,7 +3,7 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-<div class="content">
+<div class="container">
     <a href="{% url 'add' %}">Добавить</a>
 
     {% for link in links %}
