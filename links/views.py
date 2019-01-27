@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 from django.template.response import TemplateResponse
+from django.urls import reverse
 from django.utils import timezone
-from .forms import LinkForm, LoginForm, SignUpForm
+from .forms import LinkForm, LoginForm, SignUpForm, SearchForm
 from .models import Link
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
@@ -15,17 +16,39 @@ def index(request):
 # Create your views here.
 def list(request):
     links = Link.objects.filter(created_date__lte=timezone.now()).filter(author=request.user).order_by('-created_date')
-    return TemplateResponse(request, 'links/list.html', {'links': links })
+    return TemplateResponse(request, 'links/list.html', {'links': links})
+
+def tagview(request, tag):
+    links = Link.objects.filter(author=request.user).filter(taglist__icontains=tag).order_by('-created_date')
+    return TemplateResponse(request, 'links/list.html', {'links': links})
 
 
 def userpage(request):
+    form = SearchForm()
+    total = Link.objects.filter(author=request.user).count()
+
     tags = Link.objects.filter(author=request.user).values_list('taglist')
+    links_l = []
     links = []
     for tag in tags:
         a = ' '.join(tag)
-        links.append(a)
+        links_l.append(a.lower())
 
-    return TemplateResponse(request, 'links/userpage.html', {'links':links})
+    for x in links_l:
+        b = x.split(" ")
+        for i in b:
+            i = i.lower()
+            links.append(i)
+
+    dict_tag = {}
+    for link in links:
+        link = link.lower()
+        if link in dict_tag.keys():
+            dict_tag[link] += 1
+        else:
+            dict_tag[link] = 1
+
+    return TemplateResponse(request, 'links/userpage.html', {'links':dict_tag, 'total':total, 'form':form})
 
 
 def add(request):

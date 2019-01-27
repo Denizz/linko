@@ -25,7 +25,7 @@ SECRET_KEY = 'cp2k-)-q3y+t08apj^#^h)l%ixm#yal8mq#(itxrkrv(+6ld4d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'linko.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'linko.herokuapp.com', '192.168.1.27']
 
 
 # Application definition

@@ -10,6 +10,7 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('userpage/list/', views.list, name='list'),
     path('userpage/', views.userpage, name='userpage'),
+    path('userpage/list/<tag>/', views.tagview, name='tagview'),
     path('', views.index, name='index'),
     path('userpage/add/', views.add, name='add'),
     url(r'^logout/$', LogoutView.as_view(), {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),

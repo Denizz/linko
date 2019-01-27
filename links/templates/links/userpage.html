@@ -5,17 +5,23 @@
         <div class="row">
             <div class="col-sm-4">
                 <p>Поиск по #хештегам</p>
-                <p>Поле для формы</p>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Искать</button>
+                </form>
+                <br>
                 <h4>Ключевые слова:</h4>
-                {% for link in links %}
-                <p>{{ link }}</p>
+                {% for key,value  in links.items %}
+                <a href="{% url 'tagview' key %}">{{ key }} ({{ value }}), </a>
                 {% endfor %}
-
-                <a href="{% url 'list' %}">Показать все</a>
+                <br>
+                <a href="{% url 'list' %}"><h4>Показать все сохраненные линки ({{total}})</h4></a>
             </div>
             <div class="col-sm-4">
                 {% if user.is_authenticated %}
                 <p>Добро пожаловать, {{user}}!</p>
+                    <a href="{% url 'add' %}">Добавить линк</a>
                 {% else %}
                 <h3>Зарегистрируйтесь, чтобы продолжить</h3>
                 <a href="{% url 'signup' %}">Зарегистрироваться</a>

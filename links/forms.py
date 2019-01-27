@@ -8,6 +8,9 @@ class LinkForm(forms.Form):
     url = forms.URLField(label='Адрес линка', required=True)
     tags = forms.CharField(label='Теги (разделить пробелом)',required=False)
 
+class SearchForm(forms.Form):
+    keyword = forms.CharField(label='Искать в линках', required=True)
+
 
 class LoginForm(forms.Form):
     username = forms.CharField(label='Логин', required=True)
