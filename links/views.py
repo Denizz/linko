@@ -1,6 +1,5 @@
 from django.http import HttpResponse
 from django.template.response import TemplateResponse
-from django.urls import reverse
 from django.utils import timezone
 from .forms import LinkForm, LoginForm, SignUpForm, SearchForm
 from .models import Link
@@ -21,6 +20,18 @@ def list(request):
 def tagview(request, tag):
     links = Link.objects.filter(author=request.user).filter(taglist__icontains=tag).order_by('-created_date')
     return TemplateResponse(request, 'links/list.html', {'links': links})
+
+def search(request):
+    if request.method == "POST":
+        form = SearchForm(request.POST)
+        if form.is_valid():
+            keyword = form.cleaned_data['keyword']
+            links = Link.objects.filter(author=request.user).exclude(title__icontains=keyword, taglist__icontains=keyword).order_by('-created_date')
+            return TemplateResponse(request, 'links/list.html', {'links': links})
+    else:
+        links = ["hello my darling oxana"]
+        return TemplateResponse(request, 'links/list.html', {'links': links})
+
 
 
 def userpage(request):
@@ -67,9 +78,11 @@ def add(request):
 def logout(request):
     logout(request)
 
-def remove(request):
-    print("gone")
-    return TemplateResponse(request, 'links/remove.html', {})
+def remove(request, pk):
+    if request.method == 'POST':
+        return  HttpResponse("deleted" + pk)
+    else:
+        return TemplateResponse(request, 'links/remove.html', {'pk': pk})
 
 def signup(request):
     if request.method == 'POST':

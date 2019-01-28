@@ -1,10 +1,20 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
+    <script src="{% static 'js/scripts.js' %}"></script>
+
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 <h2>Линк для удаления:</h2>
+<form method="post">
+        {% csrf_token %}
+
+    <input type="hidden" value='{{pk}}'> </input>
+    <button type="submit">Подтвердить удаление</button>
+</form>
+{{pk}}
+
 </body>
 </html>
