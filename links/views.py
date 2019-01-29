@@ -5,6 +5,8 @@ from .forms import LinkForm, LoginForm, SignUpForm, SearchForm
 from .models import Link
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
+from django.db.models import Q
+
 
 
 def index(request):
@@ -26,7 +28,7 @@ def search(request):
         form = SearchForm(request.POST)
         if form.is_valid():
             keyword = form.cleaned_data['keyword']
-            links = Link.objects.filter(author=request.user).exclude(title__icontains=keyword, taglist__icontains=keyword).order_by('-created_date')
+            links = Link.objects.filter(Q(taglist__icontains=keyword) | Q(title__icontains=keyword)).filter(author=request.user).order_by('-created_date')
             return TemplateResponse(request, 'links/list.html', {'links': links})
     else:
         links = ["hello my darling oxana"]
@@ -80,9 +82,10 @@ def logout(request):
 
 def remove(request, pk):
     if request.method == 'POST':
-        return  HttpResponse("deleted" + pk)
+        Link.objects.get(id=pk).delete()
+        return  TemplateResponse(request, 'links/remove.html', {'msg': 'Ссылка навсегда удалена', 'sts': 0})
     else:
-        return TemplateResponse(request, 'links/remove.html', {'pk': pk})
+        return TemplateResponse(request, 'links/remove.html', {'msg': 'Подтвердить удаление:', 'sts': 1})
 
 def signup(request):
     if request.method == 'POST':

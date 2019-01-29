@@ -1,5 +1,5 @@
 p {
-    font: darkblue;
+    color: darkblue;
 }
 
 .links-tab {
@@ -8,4 +8,8 @@ p {
 }
 body {
     background-color: #F0F8FF;
+}
+
+h4 a{
+    color: DARKSLATEGRAY;
 }

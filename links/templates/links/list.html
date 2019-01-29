@@ -9,7 +9,7 @@
     {% for link in links %}
         <div class="links-tab">
             <h4><a href={{ link.text }} target="_blank"> {{ link.title }}</a></h4>
-            <p>(текст ссылки: {{link.text}})</p>
+            <p>(текст ссылки: <a href={{link.text}} target="_blank"> {{link.text}})</a></p>
             <small>добавлена: {{ link.created_date }} </small>
             <small><a href="{% url 'remove' link.pk %}">Удалить</a></small>
         </div>
