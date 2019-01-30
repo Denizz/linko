@@ -9,7 +9,11 @@ class LinkForm(forms.Form):
     tags = forms.CharField(label='Теги (разделить пробелом)',required=False)
 
 class SearchForm(forms.Form):
-    keyword = forms.CharField(label='Искать в линках', required=True)
+    keyword = forms.CharField(label='',required=True)
+
+    def __init__(self, *args, **kwargs):
+        super(SearchForm, self).__init__(*args, **kwargs)
+        self.fields['keyword'].widget.attrs.update({'class': 'form-control search'})
 
 
 class LoginForm(forms.Form):

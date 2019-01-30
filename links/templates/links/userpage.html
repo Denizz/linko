@@ -4,11 +4,16 @@
     <div class="content">
         <div class="row">
             <div class="col-sm-4">
-                <form method="post" action="{% url 'search' %}">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit">Искать</button>
-                </form>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <form method="post" action="{% url 'search' %}">
+                       {% csrf_token %}
+                        {{ form.as_p }}
+                    </div>
+                    <div class="col-sm-4"><button type="submit" class="btn btn-primary submit-button">поиск</button>
+                        </form>
+                    </div>
+                </div>
                 <br>
                 <h4>Ключевые слова:</h4>
                 {% for key,value  in links.items %}
@@ -17,10 +22,10 @@
                 <br>
                 <a href="{% url 'list' %}"><h4>Показать все сохраненные линки ({{total}})</h4></a>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 {% if user.is_authenticated %}
-                <p>Добро пожаловать, {{user}}!</p>
-                    <a href="{% url 'add' %}">Добавить линк</a>
+                <h3>Добро пожаловать, {{user}}!</h3>
+                <a href="{% url 'add' %}" class="link">✚ Добавить линк</a>
                 {% else %}
                 <h3>Зарегистрируйтесь, чтобы продолжить</h3>
                 <a href="{% url 'signup' %}">Зарегистрироваться</a>
@@ -31,7 +36,7 @@
                 </form>
                 {% endif %}
             </div>
-            <div class="col-sm-4">Реклама</div>
+            <div class="col-sm-2"><small>Реклама</small></div>
         </div>
     </div>
 </div>

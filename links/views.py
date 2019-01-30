@@ -31,8 +31,7 @@ def search(request):
             links = Link.objects.filter(Q(taglist__icontains=keyword) | Q(title__icontains=keyword)).filter(author=request.user).order_by('-created_date')
             return TemplateResponse(request, 'links/list.html', {'links': links})
     else:
-        links = ["hello my darling oxana"]
-        return TemplateResponse(request, 'links/list.html', {'links': links})
+        return TemplateResponse(request, 'links/list.html', {'links': "Не найдено"})
 
 
 
@@ -71,10 +70,10 @@ def add(request):
             print("chek and get")
             new_link = Link(author=request.user, title=form.cleaned_data['title'], taglist = form.cleaned_data['tags'], text=form.cleaned_data['url'], created_date=timezone.now())
             new_link.save()
-            return HttpResponse("Запись добавлена в базу данных <a href=''>Вернуться</a>")
+            return TemplateResponse(request, 'links/add.html', {'form': form, 'msg': 'Ссылка для "'+form.cleaned_data['title']+'" успешно добавлена!'})
     else:
         form = LinkForm()
-        return TemplateResponse(request, 'links/add.html', {'form': form})
+        return TemplateResponse(request, 'links/add.html', {'form': form, 'msg': 'Добавить линк в коллекцию:'})
 
 
 def logout(request):

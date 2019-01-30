@@ -11,12 +11,15 @@
 </head>
 <body>
 <div class="header">
+    <div class="row">
+        <div class="col">
     {% if user.is_authenticated %}
-    <p>Добро пожаловать, {{user }}!    <a href="{% url 'logout' %}">Выйти</a></p>
+            <a href="{% url 'logout' %}" align="right" class="header-top"><h4><br>ツ {{user }}&nbsp;выйти</b></h4></a>
+
 
     {% endif %}
-
-
+    </div>
+</div>
 </div>
 
             {% block content %}

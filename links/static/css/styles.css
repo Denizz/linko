@@ -1,15 +1,62 @@
 p {
-    color: darkblue;
+    color: #0B3861;
+    font: arial;
+
 }
 
-.links-tab {
-    border: dotted lightblue 1px;
+
+
+.col-md-auto {
+    border: dashed #0B0B61 1px;
+
+}
+.h4-darkgrey a {
+color: #0B3861;
 
 }
 body {
-    background-color: #F0F8FF;
+    background-color: #E6E6E6;
 }
 
-h4 a{
-    color: DARKSLATEGRAY;
+.back-link {
+    font-size: 1.195em; /* 14px/16=0.875em */
+    color: #0B3B24;
+    padding: 5px 0px 20px 15px;
+   }
+ .back-div {
+ display: block;
+
+ }
+
+.header a h4{
+    width: 100%;
+    background: #0B3B24;
+    opacity: 0.8;
+    position: fixed;
+    font-size: 20px;
+    padding: 0 10px 10px 10px;
+}
+.header {
+    height:auto;
+
+}
+a.header-top {
+    align: center;
+    color: lightgrey;
+
+}
+.container {
+margin-top: 80px;
+}
+.col-sm-4,.col-sm-2, .col-sm-6  {
+    border: dotted #0B0B61 1px;
+
+}
+.submit-button {
+float: center;
+}
+
+.search {
+width: 100%;
+
 }
