@@ -1,15 +1,15 @@
 {% extends 'links/base.html' %}
 {% block content %}
-<div class="container">
+<div class="container-fluid  padding">
     <div class="content">
-        <div class="row">
+        <div class="row welcom text-center">
             <div class="col-sm-4">
 
             </div>
             <div class="col-sm-4">
                 {% if user.is_authenticated %}
-                <p>Добро пожаловать, {{user}}!</p>
-                <a href="{% url 'userpage' %}">Перейти в акаунт</a>
+                <h4>Добро пожаловать, {{user}}!</h4>
+                <a class="link" href="{% url 'userpage' %}">Перейти в акаунт</a>
                 {% else %}
                 <h3>Зарегистрируйтесь, чтобы продолжить</h3>
                 <a href="{% url 'signup' %}">Зарегистрироваться</a>

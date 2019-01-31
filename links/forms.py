@@ -19,6 +19,11 @@ class SearchForm(forms.Form):
 class LoginForm(forms.Form):
     username = forms.CharField(label='Логин', required=True)
     password = forms.CharField(label='Пароль', required=True, widget=forms.PasswordInput)
+    def __init__(self, *args, **kwargs):
+        super(LoginForm, self).__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs.update({'class': 'form-control'})
+        self.fields['password'].widget.attrs.update({'class': 'form-control'})
+
 
 
 class SignUpForm(UserCreationForm):

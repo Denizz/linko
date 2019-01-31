@@ -8,16 +8,15 @@ from django.shortcuts import render, redirect
 from django.db.models import Q
 
 
-
 def index(request):
     form = LoginForm()
     return TemplateResponse(request, 'links/index.html', {'form': form})
 
 
-# Create your views here.
 def list(request):
     links = Link.objects.filter(created_date__lte=timezone.now()).filter(author=request.user).order_by('-created_date')
     return TemplateResponse(request, 'links/list.html', {'links': links})
+
 
 def tagview(request, tag):
     links = Link.objects.filter(author=request.user).filter(taglist__icontains=tag).order_by('-created_date')
@@ -32,7 +31,6 @@ def search(request):
             return TemplateResponse(request, 'links/list.html', {'links': links})
     else:
         return TemplateResponse(request, 'links/list.html', {'links': "Не найдено"})
-
 
 
 def userpage(request):
@@ -79,12 +77,14 @@ def add(request):
 def logout(request):
     logout(request)
 
+
 def remove(request, pk):
     if request.method == 'POST':
         Link.objects.get(id=pk).delete()
         return  TemplateResponse(request, 'links/remove.html', {'msg': 'Ссылка навсегда удалена', 'sts': 0})
     else:
         return TemplateResponse(request, 'links/remove.html', {'msg': 'Подтвердить удаление:', 'sts': 1})
+
 
 def signup(request):
     if request.method == 'POST':

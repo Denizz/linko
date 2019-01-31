@@ -1,9 +1,10 @@
 {% extends 'links/base.html' %}
 {% block content %}
-<div class="container">
-    <div class="content">
+<div class="container-fluid padding">
         <div class="row">
             <div class="col-sm-4">
+                <div class="container-fluid padding">
+                    <br>
                 <div class="row">
                     <div class="col-sm-8">
                         <form method="post" action="{% url 'search' %}">
@@ -14,6 +15,8 @@
                         </form>
                     </div>
                 </div>
+                </div>
+                <hr>
                 <br>
                 <h4>Ключевые слова:</h4>
                 {% for key,value  in links.items %}
@@ -27,7 +30,7 @@
                 <h3>Добро пожаловать, {{user}}!</h3>
                 <a href="{% url 'add' %}" class="link">✚ Добавить линк</a>
                 {% if not lastfive %}
-                <h4>Похоже у вас пока нет ни одного сохраненного линка</h4>
+                <p class="lead">Похоже, что у вас еще нет ни одного сохраненного линка</p>
                 {% endif %}
                 {% for lf in lastfive %}
         <div class="col-md-auto">
@@ -51,6 +54,5 @@
             </div>
             <div class="col-sm-2"><small>Реклама</small></div>
         </div>
-    </div>
 </div>
 {% endblock %}
