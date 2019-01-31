@@ -38,7 +38,7 @@ def search(request):
 def userpage(request):
     form = SearchForm()
     total = Link.objects.filter(author=request.user).count()
-
+    lastfive = Link.objects.filter(created_date__lte=timezone.now()).filter(author=request.user).order_by('-created_date')[:5]
     tags = Link.objects.filter(author=request.user).values_list('taglist')
     links_l = []
     links = []
@@ -60,7 +60,7 @@ def userpage(request):
         else:
             dict_tag[link] = 1
 
-    return TemplateResponse(request, 'links/userpage.html', {'links':dict_tag, 'total':total, 'form':form})
+    return TemplateResponse(request, 'links/userpage.html', {'links':dict_tag, 'total':total, 'form':form, 'lastfive':lastfive})
 
 
 def add(request):

@@ -26,6 +26,19 @@
                 {% if user.is_authenticated %}
                 <h3>Добро пожаловать, {{user}}!</h3>
                 <a href="{% url 'add' %}" class="link">✚ Добавить линк</a>
+                {% if not lastfive %}
+                <h4>Похоже у вас пока нет ни одного сохраненного линка</h4>
+                {% endif %}
+                {% for lf in lastfive %}
+        <div class="col-md-auto">
+            <h4 class="h4-darkgrey"><a href={{ lf.text }} target="_blank"> {{ lf.title }}</a></h4>
+            <p><strong>текст ссылки: </strong><a href={{lf.text}} target="_blank"> {{lf.text}}</a></p>
+            <small>добавлена: {{ lf.created_date }}&nbsp;&nbsp;&nbsp;</small>
+            <a href="{% url 'remove' lf.pk %}">☒Удалить</a>
+        </div>
+    {% endfor %}
+    <br>
+
                 {% else %}
                 <h3>Зарегистрируйтесь, чтобы продолжить</h3>
                 <a href="{% url 'signup' %}">Зарегистрироваться</a>
