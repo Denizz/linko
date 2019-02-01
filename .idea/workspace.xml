@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e4267242-c1b4-4e17-aecb-5239b5af59f9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/links/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/links/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/links/templates/links/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/links/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/links/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/links/static/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/links/templates/links/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/links/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/links/templates/links/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/links/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/links/templates/links/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/links/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/links/templates/links/remove.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/links/remove.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/links/templates/links/userpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/links/userpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/links/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/links/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/links/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,17 +51,17 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/links/templates/links/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+            <state relative-caret-position="119">
+              <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userpage.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userpage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/links/templates/links/userpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="-556">
+              <caret line="8" column="71" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -73,8 +69,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/links/templates/links/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state relative-caret-position="345">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -103,17 +99,17 @@
       <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/links/templates/links/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="79" lean-forward="true" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="79" />
+            <state relative-caret-position="270">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/links/static/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="250">
+              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -146,16 +142,16 @@
         <option value="$PROJECT_DIR$/mysite/settings.py" />
         <option value="$PROJECT_DIR$/links/urls.py" />
         <option value="$PROJECT_DIR$/links/static/js/scripts.js" />
-        <option value="$PROJECT_DIR$/links/static/css/styles.css" />
         <option value="$PROJECT_DIR$/links/templates/links/add.html" />
         <option value="$PROJECT_DIR$/links/views.py" />
         <option value="$PROJECT_DIR$/links/templates/links/remove.html" />
-        <option value="$PROJECT_DIR$/links/templates/links/base.html" />
         <option value="$PROJECT_DIR$/links/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/links/forms.py" />
         <option value="$PROJECT_DIR$/links/templates/links/list.html" />
-        <option value="$PROJECT_DIR$/links/templates/links/index.html" />
         <option value="$PROJECT_DIR$/links/templates/links/userpage.html" />
+        <option value="$PROJECT_DIR$/links/templates/links/base.html" />
+        <option value="$PROJECT_DIR$/links/templates/links/index.html" />
+        <option value="$PROJECT_DIR$/links/static/css/styles.css" />
       </list>
     </option>
   </component>
@@ -171,6 +167,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,7 +229,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,13 +276,13 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2133829" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49665427" weight="0.32715008" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50111526" side_tool="true" visible="true" weight="0.32715008" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="8" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -587,31 +583,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/links/static/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/links/templates/links/remove.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="89" selection-start-line="12" selection-start-column="89" selection-end-line="12" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/links/templates/links/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/links/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -625,24 +600,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/links/templates/links/list.html">
+    <entry file="file://$PROJECT_DIR$/links/templates/links/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="79" lean-forward="true" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/links/templates/links/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="119">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/links/templates/links/userpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="-556">
+          <caret line="8" column="71" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/links/templates/links/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/links/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/links/templates/links/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/links/static/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
         </state>
       </provider>
     </entry>

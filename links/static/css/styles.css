@@ -1,13 +1,33 @@
+html, body {
+height: 100%;
+width: 100%;
+
+}
+.navbar {
+padding: .8rem;
+}
+
+.navbar-nav li {
+padding-right: 20px;
+text-transform: uppercase;
+}
+.nav-link {
+    font-size: 1.1em !important;
+}
 p {
     color: #0B3861;
     font: arial;
 
 }
+a {
+    color: #098CA1;
+}
+
+
 
 
 
 .col-md-auto {
-    border: dashed #0B0B61 1px;
 
 }
 .h4-darkgrey a {
@@ -48,10 +68,7 @@ a.header-top {
 .container {
 margin-top: 80px;
 }
-.col-sm-4,.col-sm-2, .col-sm-6  {
-    border: dotted #0B0B61 1px;
 
-}
 .submit-button {
 float: center;
 }

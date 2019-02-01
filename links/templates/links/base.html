@@ -8,7 +8,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
@@ -21,7 +21,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                         {% if user.is_authenticated %}
-                    <a class="nav-link active" href="{% url 'logout' %}">{{user }}, выйти</a>
+                    <a class="nav-link active" href="{% url 'logout' %}"><i class="fa fa-user"></i> {{ user }}, выйти</a>
                 </li>
                 <li class="nav-item">
                         {% else %}
@@ -38,6 +38,17 @@
 </nav>
             {% block content %}
             {% endblock %}
-<footer> (О_О)/<small>подвал детектед</small></footer>
+    <footer>
+        <div class="container-fluid padding">
+            <div class="raw text-center padding">
+                <div class="col-12">
+                    <p class="lead">
+                        Created on Django <i class="fas fa-code"></i>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -16,6 +16,7 @@
             <p><strong>текст ссылки: </strong><a href={{link.text}} target="_blank"> {{link.text}}</a></p>
             <small>добавлена: {{ link.created_date }}&nbsp;&nbsp;&nbsp;</small>
             <a href="{% url 'remove' link.pk %}">☒Удалить</a>
+            <hr>
         </div>
     {% endfor %}
     <br>
