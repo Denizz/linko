@@ -1,9 +1,9 @@
 {% extends 'links/base.html' %}
 {% block content %}
-<div class="container-fluid padding">
+<div class="container-fluid">
         <div class="row">
             <div class="col-sm-4">
-                <div class="container-fluid padding">
+                <div class="container-fluid">
                     <br>
                 <div class="row padding">
                     <div class="col-md-8 col-xs-12 col-ld-12 text-right">
@@ -37,11 +37,12 @@
                 <p class="lead">Похоже, что у вас еще нет ни одного сохраненного линка</p>
                 {% endif %}
                 {% for lf in lastfive %}
-        <div class="col-md-auto">
-            <h4 class="h4-darkgrey"><a href={{ lf.text }} target="_blank"> {{ lf.title }}</a></h4>
-            <p><strong>текст ссылки: </strong><a href={{lf.text}} target="_blank"> {{lf.text}}</a></p>
-            <small>добавлена: {{ lf.created_date }}&nbsp;&nbsp;&nbsp;</small>
-            <a href="{% url 'remove' lf.pk %}">☒Удалить</a>
+            <div class="col-md-auto">
+                <h4 class="h4-darkgrey"><a href={{ lf.text }} target="_blank"> {{ lf.title }}</a></h4>
+                    <div class="col-12"><p><strong>текст ссылки: </strong><a href={{lf.text}} target="_blank"> {{lf.text}}</a></p>
+                    <small>добавлена: {{ lf.created_date }}&nbsp;&nbsp;&nbsp;</small>
+                    <a href="{% url 'remove' lf.pk %}"><i class="far fa-trash-alt"></i> Удалить</a>
+                    </div>
             <hr>
         </div>
     {% endfor %}

@@ -4,10 +4,14 @@
     <list default="true" id="e4267242-c1b4-4e17-aecb-5239b5af59f9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/links/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/links/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/links/templates/links/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/links/add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/links/templates/links/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/links/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/links/templates/links/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/links/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/links/templates/links/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/links/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/links/templates/links/remove.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/links/remove.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/links/templates/links/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/links/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/links/templates/links/userpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/links/userpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/links/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/links/templates/registration/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,23 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/links/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1395">
-              <caret line="100" column="63" selection-start-line="100" selection-start-column="63" selection-end-line="100" selection-end-column="63" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="remove.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/links/templates/links/remove.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="89" selection-start-line="12" selection-start-column="89" selection-end-line="12" selection-end-column="89" />
+              <caret line="12" column="142" selection-start-line="12" selection-start-column="142" selection-end-line="12" selection-end-column="142" />
             </state>
           </provider>
         </entry>
@@ -43,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/links/templates/links/add.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="99" selection-start-line="8" selection-start-column="99" selection-end-line="8" selection-end-column="99" />
+              <caret line="8" column="108" selection-start-line="8" selection-start-column="108" selection-end-line="8" selection-end-column="108" />
             </state>
           </provider>
         </entry>
@@ -51,17 +43,17 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/links/templates/links/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            <state relative-caret-position="450">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userpage.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="userpage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/links/templates/links/userpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-556">
-              <caret line="8" column="71" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
+            <state relative-caret-position="358">
+              <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -69,8 +61,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/links/templates/links/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="105">
+              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -78,7 +70,7 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/links/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="330">
               <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
@@ -90,8 +82,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/links/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+            <state relative-caret-position="90">
+              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -99,17 +91,26 @@
       <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/links/templates/links/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state relative-caret-position="208">
+              <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/links/static/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state relative-caret-position="160">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/links/templates/links/signup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -136,22 +137,22 @@
         <option value="$PROJECT_DIR$/links/models.py" />
         <option value="$PROJECT_DIR$/links/templates/links/add_link.html" />
         <option value="$PROJECT_DIR$/links/templates/links/newuser.html" />
-        <option value="$PROJECT_DIR$/links/templates/links/signup.html" />
         <option value="$PROJECT_DIR$/links/templates/registration/login.py" />
         <option value="$PROJECT_DIR$/mysite/urls.py" />
         <option value="$PROJECT_DIR$/mysite/settings.py" />
         <option value="$PROJECT_DIR$/links/urls.py" />
         <option value="$PROJECT_DIR$/links/static/js/scripts.js" />
-        <option value="$PROJECT_DIR$/links/templates/links/add.html" />
         <option value="$PROJECT_DIR$/links/views.py" />
-        <option value="$PROJECT_DIR$/links/templates/links/remove.html" />
-        <option value="$PROJECT_DIR$/links/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/links/forms.py" />
-        <option value="$PROJECT_DIR$/links/templates/links/list.html" />
-        <option value="$PROJECT_DIR$/links/templates/links/userpage.html" />
-        <option value="$PROJECT_DIR$/links/templates/links/base.html" />
         <option value="$PROJECT_DIR$/links/templates/links/index.html" />
+        <option value="$PROJECT_DIR$/links/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/links/templates/links/add.html" />
+        <option value="$PROJECT_DIR$/links/templates/links/list.html" />
+        <option value="$PROJECT_DIR$/links/templates/links/remove.html" />
+        <option value="$PROJECT_DIR$/links/templates/links/signup.html" />
         <option value="$PROJECT_DIR$/links/static/css/styles.css" />
+        <option value="$PROJECT_DIR$/links/templates/links/base.html" />
+        <option value="$PROJECT_DIR$/links/templates/links/userpage.html" />
       </list>
     </option>
   </component>
@@ -275,7 +276,7 @@
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2133829" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49665427" weight="0.32715008" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50111526" side_tool="true" visible="true" weight="0.32715008" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50111526" side_tool="true" weight="0.32715008" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="8" />
@@ -291,6 +292,25 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.49888477" visible="true" weight="0.32715008" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2133829" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49665427" weight="0.32715008" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.49888477" visible="true" weight="0.32715008" />
+      <window_info anchor="bottom" id="Python Console" order="8" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50111526" side_tool="true" visible="true" weight="0.32715008" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -523,13 +543,6 @@
     <entry file="file://$PROJECT_DIR$/links/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/links/templates/links/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/links/templates/registration/login.py" />
     <entry file="file://$PROJECT_DIR$/mysite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -566,13 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/links/templates/links/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="99" selection-start-line="8" selection-start-column="99" selection-end-line="8" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/links/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1395">
@@ -583,16 +589,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/links/templates/links/remove.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="89" selection-start-line="12" selection-start-column="89" selection-end-line="12" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/links/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="330">
           <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
@@ -600,45 +599,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/links/templates/links/base.html">
+    <entry file="file://$PROJECT_DIR$/links/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state relative-caret-position="90">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/links/templates/links/userpage.html">
+    <entry file="file://$PROJECT_DIR$/links/templates/links/add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-556">
-          <caret line="8" column="71" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
+        <state relative-caret-position="120">
+          <caret line="8" column="108" selection-start-line="8" selection-start-column="108" selection-end-line="8" selection-end-column="108" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/links/templates/links/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="105">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/links/templates/registration/login.html">
+    <entry file="file://$PROJECT_DIR$/links/templates/links/remove.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <caret line="12" column="142" selection-start-line="12" selection-start-column="142" selection-end-line="12" selection-end-column="142" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/links/templates/links/list.html">
+    <entry file="file://$PROJECT_DIR$/links/templates/links/signup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state relative-caret-position="105">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/links/static/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state relative-caret-position="160">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/links/templates/links/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/links/templates/links/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/links/templates/links/userpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
         </state>
       </provider>
     </entry>

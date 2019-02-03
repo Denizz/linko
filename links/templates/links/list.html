@@ -1,28 +1,31 @@
 {% extends 'links/base.html' %}
-
-
 {% block content %}
 {% if user.is_authenticated %}
 <div class="container-fluid">
-    <a href="{% url 'add' %}" class="link">✚ Добавить</a>
-    <br>
-    {% if not links %}
+    <div class="row">
+        <div class="col-12">
+            <br>
+            <a href="{% url 'add' %}" class="link"><i class="fas fa-plus"></i> Добавить новую ссылку</a>
+            <hr class="col-12">
+            {% if not links %}
+                <h4>Ничего не найдено (•̪●)</h4>
+            {% endif %}
+            {% for link in links %}
+                <h4 class="h4-darkgrey"><a href={{ link.text }} target="_blank"> {{ link.title }}</a></h4>
+            <div class="col-12">
+                <p><strong>текст ссылки: </strong><a href={{link.text}} target="_blank" class="link"> {{link.text}}</a></p>
+                <small>добавлена: {{ link.created_date }}&nbsp;&nbsp;&nbsp;</small>
+                <a href="{% url 'remove' link.pk %}"><i class="far fa-trash-alt"></i> Удалить</a>
+            </div>
+                <hr>
+            {% endfor %}
+            <br>
+            <div class="back-div"><a href="{% url 'userpage' %}" class="back-link"><i class="fas fa-arrow-left"></i><b> Назад</b></a></div>
 
-    <h4>Ничего не найдено (•̪●)</h4>
-    {% endif %}
-    {% for link in links %}
-        <div class="col-md-auto">
-            <h4 class="h4-darkgrey"><a href={{ link.text }} target="_blank"> {{ link.title }}</a></h4>
-            <p><strong>текст ссылки: </strong><a href={{link.text}} target="_blank"> {{link.text}}</a></p>
-            <small>добавлена: {{ link.created_date }}&nbsp;&nbsp;&nbsp;</small>
-            <a href="{% url 'remove' link.pk %}">☒Удалить</a>
-            <hr>
+            {%else %}
+                <h3>Авторизируйтесь, чтобы пользоваться сайтом.</h3>
+            {% endif %}
+        {% endblock %}
         </div>
-    {% endfor %}
-    <br>
-    <div class="back-div"><a href="{% url 'userpage' %}" class="back-link"><b>⇦ Назад</b></a></div>
+    </div>
 </div>
-{%else %}
-<h3>Авторизируйтесь, чтобы пользоваться сайтом.</h3>
-{% endif %}
-{% endblock %}

@@ -10,8 +10,7 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
-<body>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top ">
     <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'index' %}">ツ</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -38,17 +37,17 @@
 </nav>
             {% block content %}
             {% endblock %}
-    <footer>
-        <div class="container-fluid padding">
-            <div class="raw text-center padding">
-                <div class="col-12">
+<footer>
+        <div class="navbar-static-bottom row-fluid text-center sticky-bottom">
+            <div class="navbar-inner">
+                <div class="container">
                     <p class="lead">
                         Created on Django <i class="fas fa-code"></i>
                     </p>
                 </div>
-
             </div>
         </div>
-    </footer>
+
+</footer>
 </body>
 </html>
