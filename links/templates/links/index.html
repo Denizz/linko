@@ -5,19 +5,35 @@
             <div class="col-sm-4">
 
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4" style="padding-top: 2rem; ">
                 {% if user.is_authenticated %}
-                <h4>Добро пожаловать, {{user}}!</h4>
-                <a class="link" href="{% url 'userpage' %}">Перейти в акаунт</a>
+                <br>
+                <h5>Добро пожаловать, {{user}}!</h5>
+                <a class="lead" href="{% url 'userpage' %}"><i class="far fa-address-book"></i> Перейти в акаунт</a>
                 {% else %}
-                <h3>Зарегистрируйтесь, чтобы продолжить</h3>
-                <a href="{% url 'signup' %}">Зарегистрироваться</a>
-                <h2>Или войдите, используя свой логин или пароль</h2>
-                <a href="{% url 'login' %}">Войти</a>
+                <h4>Зарегистрируйтесь, чтобы продолжить</h4>
+                <a href="{% url 'signup' %}"><i class="fas fa-user-plus"></i> Зарегистрироваться</a>
+                <hr>
+                <h5>Или войдите, используя свой логин или пароль</h5>
+                <a href="{% url 'login' %}"><i class="fas fa-walking"></i><i class="fas fa-door-open"></i> Войти</a>
                 {% endif %}
             </div>
-            <div class="col-sm-4">Реклама</div>
         </div>
+    <div style="height: 25%;">
+
+    </div>
 </div>
+<footer>
+        <div class="navbar fixed-bottom text-center">
+            <div class="navbar-inner">
+                <div class="container">
+                    <p>
+                        Created on Django <i class="fas fa-code"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+</footer>
 
 {% endblock %}

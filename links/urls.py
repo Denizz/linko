@@ -16,4 +16,6 @@ urlpatterns = [
     url(r'login/$', LoginView.as_view(redirect_authenticated_user=True), name='login'),
     path('userpage/remove/<pk>/', views.remove, name='remove'),
     url(r'^signup/$', views.signup, name='signup'),
+    url(r'^about/$', views.about, name='about'),
+
 ]

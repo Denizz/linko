@@ -12,6 +12,9 @@ def index(request):
     form = LoginForm()
     return TemplateResponse(request, 'links/index.html', {'form': form})
 
+def about(request):
+    return TemplateResponse(request, 'links/about.html', {})
+
 
 def list(request):
     links = Link.objects.filter(created_date__lte=timezone.now()).filter(author=request.user).order_by('-created_date')

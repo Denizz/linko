@@ -19,6 +19,9 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">О проекте</a>
+                </li>
+                <li class="nav-item">
                         {% if user.is_authenticated %}
                     <a class="nav-link active" href="{% url 'logout' %}"><i class="fa fa-user"></i> {{ user }}, выйти</a>
                 </li>
@@ -37,17 +40,6 @@
 </nav>
             {% block content %}
             {% endblock %}
-<footer>
-        <div class="navbar-static-bottom row-fluid text-center sticky-bottom">
-            <div class="navbar-inner">
-                <div class="container">
-                    <p class="lead">
-                        Created on Django <i class="fas fa-code"></i>
-                    </p>
-                </div>
-            </div>
-        </div>
 
-</footer>
 </body>
 </html>
