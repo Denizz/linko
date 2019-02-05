@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^logout/$', LogoutView.as_view(), {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),
     url(r'login/$', LoginView.as_view(redirect_authenticated_user=True), name='login'),
     path('userpage/remove/<pk>/', views.remove, name='remove'),
+    path('userpage/edit/<pk>/', views.edit, name='edit'),
     url(r'^signup/$', views.signup, name='signup'),
     url(r'^about/$', views.about, name='about'),
 

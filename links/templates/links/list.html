@@ -13,8 +13,9 @@
             {% for link in links %}
                 <h4 class="h4-darkgrey"><a href={{ link.text }} target="_blank"> {{ link.title }}</a></h4>
             <div class="col-12">
-                <p><strong>текст ссылки: </strong><a href={{link.text}} target="_blank" class="link"> {{link.text}}</a></p>
-                <small>добавлена: {{ link.created_date }}&nbsp;&nbsp;&nbsp;</small>
+                <p><strong>текст ссылки: </strong><a href={{link.text}} target="_blank" class="link"> {{link.text}}</a>
+                <br><small>добавлена: {{ link.created_date }}&nbsp;&nbsp;&nbsp;</small></p>
+                <a href="{% url 'edit' link.pk %}" style="padding-right: 2rem;"><i class="fas fa-pencil-alt"></i> Редактировать</a>
                 <a href="{% url 'remove' link.pk %}"><i class="far fa-trash-alt"></i> Удалить</a>
             </div>
                 <hr>

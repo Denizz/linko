@@ -1,10 +1,11 @@
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.template.response import TemplateResponse
 from django.utils import timezone
 from .forms import LinkForm, LoginForm, SignUpForm, SearchForm
 from .models import Link
 from django.contrib.auth import login, authenticate
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.db.models import Q
 
 
@@ -68,13 +69,31 @@ def add(request):
     if request.method == "POST":
         form = LinkForm(request.POST)
         if form.is_valid():
-            print("chek and get")
-            new_link = Link(author=request.user, title=form.cleaned_data['title'], taglist = form.cleaned_data['tags'], text=form.cleaned_data['url'], created_date=timezone.now())
-            new_link.save()
-            return TemplateResponse(request, 'links/add.html', {'form': form, 'msg': 'Ссылка для "'+form.cleaned_data['title']+'" успешно добавлена!'})
+            if request.user.is_authenticated:
+                new_link = form.save(commit=False)
+                new_link.author = request.user
+                new_link.published_date = timezone.now()
+                new_link.save()
+                return TemplateResponse(request, 'links/add.html', {'form': form, 'msg': 'Ссылка для "'+form.cleaned_data['title']+'" успешно добавлена!'})
+            else:
+                return redirect('index')
     else:
         form = LinkForm()
         return TemplateResponse(request, 'links/add.html', {'form': form, 'msg': 'Добавить линк в коллекцию:'})
+
+def edit(request, pk):
+    link = get_object_or_404(Link, pk=pk)
+    if request.method == "POST":
+        form = LinkForm(request.POST, instance=link)
+        if form.is_valid():
+            link = form.save(commit=False)
+            link.author = request.user
+            link.published_date = timezone.now()
+            link.save()
+            return redirect('userpage')
+    else:
+        form = LinkForm(instance=link)
+    return render(request, 'links/add.html', {'form': form})
 
 
 def logout(request):
