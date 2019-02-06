@@ -9,8 +9,16 @@ class LinkForm(forms.ModelForm):
         model = Link
         fields = ('title', 'text', 'taglist')
         labels = {
-            "title": "хмммм"
+            'title': 'Заголовок',
+            'text': 'Адрес',
+            'taglist': 'Ключевые слова (разделить пробелом)',
         }
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'text': forms.TextInput(attrs={'class': 'form-control'}),
+            'taglist': forms.TextInput(attrs={'class': 'form-control'}),
+        }
+
 
 
 class SearchForm(forms.Form):
@@ -22,12 +30,11 @@ class SearchForm(forms.Form):
 
 
 class LoginForm(forms.Form):
-    username = forms.CharField(label='Логин', required=True)
-    password = forms.CharField(label='Пароль', required=True, widget=forms.PasswordInput)
+    username = forms.CharField(required=True)
+    password = forms.CharField(required=True, widget=forms.PasswordInput)
+
     def __init__(self, *args, **kwargs):
         super(LoginForm, self).__init__(*args, **kwargs)
-        self.fields['username'].widget.attrs.update({'class': 'form-control'})
-        self.fields['password'].widget.attrs.update({'class': 'form-control'})
 
 
 

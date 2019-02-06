@@ -39,8 +39,9 @@
                 {% for lf in lastfive %}
             <div class="col-md-auto">
                 <h4 class="h4-darkgrey"><a href={{ lf.text }} target="_blank"> {{ lf.title }}</a></h4>
-                    <div class="col-12"><p><strong>текст ссылки: </strong><a href={{lf.text}} target="_blank"> {{lf.text}}</a></p>
-                    <small>добавлена: {{ lf.created_date }}&nbsp;&nbsp;&nbsp;</small>
+                    <div class="col-12"><p><strong>текст ссылки: </strong><a href={{lf.text}} target="_blank"> {{lf.text}}</a>
+                    <br><small>добавлена: {{ lf.created_date }}&nbsp;&nbsp;&nbsp;</small></p>
+                    <a href="{% url 'edit' lf.pk %}" style="padding-right: 2rem;"><i class="fas fa-pencil-alt"></i> Редактировать</a>
                     <a href="{% url 'remove' lf.pk %}"><i class="far fa-trash-alt"></i> Удалить</a>
                     </div>
             <hr>
