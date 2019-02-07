@@ -1,5 +1,7 @@
 {% extends 'links/base.html' %}
 {% block content %}
+{% if request.user.is_authenticated %}
+
 <div class="container-fluid">
         <div class="row">
             <div class="col-sm-4">
@@ -28,10 +30,9 @@
                 <a href="{% url 'list' %}"><h4>Показать все сохраненные линки ({{total}})</h4></a>
             </div>
             <div class="col-sm-6">
-                {% if user.is_authenticated %}
                 <br>
                 <h3>Добро пожаловать, {{user}}!</h3>
-                <a href="{% url 'add' %}" class="link">✚ Добавить линк</a>
+                <a href="{% url 'add' %}" class="link"><i class="fas fa-plus"></i> Добавить линк</a>
                 <hr>
                 {% if not lastfive %}
                 <p class="lead">Похоже, что у вас еще нет ни одного сохраненного линка</p>
@@ -57,9 +58,9 @@
                     {{ form.as_p }}
                     <button type="submit" class="login btn btn-default">Войти</button>
                 </form>
-                {% endif %}
             </div>
             <div class="col-sm-2"></div>
         </div>
 </div>
+{% endif %}
 {% endblock %}

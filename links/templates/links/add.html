@@ -4,7 +4,7 @@
     <h4>{{msg}}</h4>
         <form method="POST" class="link-form">{% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class="save btn btn-default">Сохранить</button>
+            <button type="submit" class="save btn btn-primary">Сохранить</button>
         </form>
     <div class="back-div"><a href="{% url 'userpage' %}" class="back-link"><i class="fas fa-arrow-left"></i><b> Вернуться в профиль</b></a></div>
 </div>

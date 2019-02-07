@@ -1,12 +1,13 @@
-from django.contrib.auth.models import User
-from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
+from django.template import RequestContext
 from django.template.response import TemplateResponse
 from django.utils import timezone
 from .forms import LinkForm, LoginForm, SignUpForm, SearchForm
 from .models import Link
 from django.contrib.auth import login, authenticate
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, render_to_response
 from django.db.models import Q
+
 
 
 def index(request):
@@ -36,7 +37,7 @@ def search(request):
     else:
         return TemplateResponse(request, 'links/list.html', {'links': "Не найдено"})
 
-
+@login_required
 def userpage(request):
     form = SearchForm()
     total = Link.objects.filter(author=request.user).count()
@@ -64,7 +65,7 @@ def userpage(request):
 
     return TemplateResponse(request, 'links/userpage.html', {'links':dict_tag, 'total':total, 'form':form, 'lastfive':lastfive})
 
-
+@login_required
 def add(request):
     if request.method == "POST":
         form = LinkForm(request.POST)
@@ -81,6 +82,7 @@ def add(request):
         form = LinkForm()
         return TemplateResponse(request, 'links/add.html', {'form': form, 'msg': 'Добавить линк в коллекцию:'})
 
+@login_required
 def edit(request, pk):
     link = get_object_or_404(Link, pk=pk)
     if request.method == "POST":
@@ -100,6 +102,7 @@ def logout(request):
     logout(request)
 
 
+@login_required
 def remove(request, pk):
     if request.method == 'POST':
         Link.objects.get(id=pk).delete()
@@ -121,3 +124,11 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'links/signup.html', {'form': form})
+
+
+def error404(request, exception):
+    context = RequestContext(request)
+    err_code = 404
+    response = render_to_response('404.html', {"code":err_code}, context)
+    response.status_code = 404
+    return response

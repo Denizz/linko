@@ -4,6 +4,7 @@ from . import views
 from django.conf import settings
 from django.contrib.auth.views import LogoutView, LoginView
 
+handler404 = 'links.views.error404'
 
 urlpatterns = [
     path('userpage/list/', views.list, name='list'),

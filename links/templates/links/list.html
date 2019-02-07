@@ -14,14 +14,14 @@
                 <h4 class="h4-darkgrey"><a href={{ link.text }} target="_blank"> {{ link.title }}</a></h4>
             <div class="col-12">
                 <p><strong>текст ссылки: </strong><a href={{link.text}} target="_blank" class="link"> {{link.text}}</a>
-                <br><small>добавлена: {{ link.created_date }}&nbsp;&nbsp;&nbsp;</small></p>
+                <br><small>добавлена: {{ link.created_date }}&nbsp;&nbsp;&nbsp;</small></p><a href="#"><i class="far fa-copy">Копировать в буфер</i></a>
                 <a href="{% url 'edit' link.pk %}" style="padding-right: 2rem;"><i class="fas fa-pencil-alt"></i> Редактировать</a>
                 <a href="{% url 'remove' link.pk %}"><i class="far fa-trash-alt"></i> Удалить</a>
             </div>
                 <hr>
             {% endfor %}
             <br>
-            <div class="back-div"><a href="{% url 'userpage' %}" class="back-link"><i class="fas fa-arrow-left"></i><b> Назад</b></a></div>
+            <div><a href="{% url 'userpage' %}" class="back-link"><i class="far fa-address-book"></i><b> Вернуться в аккаунт</b></a></nav>
 
             {%else %}
                 <h3>Авторизируйтесь, чтобы пользоваться сайтом.</h3>
