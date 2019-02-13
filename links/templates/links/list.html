@@ -1,6 +1,5 @@
 {% extends 'links/base.html' %}
 {% block content %}
-{% if user.is_authenticated %}
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
@@ -8,25 +7,25 @@
             <a href="{% url 'add' %}" class="link"><i class="fas fa-plus"></i> Добавить новую ссылку</a>
             <hr class="col-12">
             {% if not links %}
-                <h4>Ничего не найдено (•̪●)</h4>
+                <h4>Нет ни одного линка</h4>
             {% endif %}
             {% for link in links %}
                 <h4 class="h4-darkgrey"><a href={{ link.text }} target="_blank"> {{ link.title }}</a></h4>
             <div class="col-12">
                 <p><strong>текст ссылки: </strong><a href={{link.text}} target="_blank" class="link"> {{link.text}}</a>
-                <br><small>добавлена: {{ link.created_date }}&nbsp;&nbsp;&nbsp;</small></p><a href="#"><i class="far fa-copy">Копировать в буфер</i></a>
+                <br><small>добавлена: {{ link.created_date }}&nbsp;&nbsp;&nbsp;</small></p>
                 <a href="{% url 'edit' link.pk %}" style="padding-right: 2rem;"><i class="fas fa-pencil-alt"></i> Редактировать</a>
                 <a href="{% url 'remove' link.pk %}"><i class="far fa-trash-alt"></i> Удалить</a>
             </div>
                 <hr>
             {% endfor %}
             <br>
-            <div><a href="{% url 'userpage' %}" class="back-link"><i class="far fa-address-book"></i><b> Вернуться в аккаунт</b></a></nav>
-
-            {%else %}
-                <h3>Авторизируйтесь, чтобы пользоваться сайтом.</h3>
-            {% endif %}
-        {% endblock %}
         </div>
     </div>
 </div>
+    <nav class="navbar navbar-dark text-center bg-light fixed-bottom " id="bottombar">
+    <div class="container-fluid">
+        <a href="{% url 'userpage' %}" class="back-link"><i class="far fa-address-book"></i><b> Вернуться в аккаунт</b></a>
+    </div>
+</nav>
+{% endblock %}

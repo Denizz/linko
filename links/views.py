@@ -2,6 +2,9 @@ from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
 from django.template.response import TemplateResponse
 from django.utils import timezone
+from django.views.generic import TemplateView
+from django.views.generic.edit import CreateView
+
 from .forms import LinkForm, LoginForm, SignUpForm, SearchForm
 from .models import Link
 from django.contrib.auth import login, authenticate
@@ -9,15 +12,15 @@ from django.shortcuts import render, redirect, get_object_or_404, render_to_resp
 from django.db.models import Q
 
 
-
-def index(request):
-    form = LoginForm()
-    return TemplateResponse(request, 'links/index.html', {'form': form})
-
-def about(request):
-    return TemplateResponse(request, 'links/about.html', {})
+class HomePageView(TemplateView):
+    template_name ='links/index.html'
 
 
+class AboutPageView(TemplateView):
+    template_name = 'links/about.html'
+
+
+@login_required
 def list(request):
     links = Link.objects.filter(created_date__lte=timezone.now()).filter(author=request.user).order_by('-created_date')
     return TemplateResponse(request, 'links/list.html', {'links': links})
