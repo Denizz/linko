@@ -4,18 +4,18 @@
     <div class="row">
         <div class="col-12">
             <br>
-            <a href="{% url 'add' %}" class="link"><i class="fas fa-plus"></i> Добавить новую ссылку</a>
+            <a href="{% url 'add' %}" class="link"><i class="fas fa-plus"></i> Add new link</a>
             <hr class="col-12">
             {% if not links %}
-                <h4>Нет ни одного линка</h4>
+                <h4>No link is found</h4>
             {% endif %}
             {% for link in links %}
                 <h4 class="h4-darkgrey"><a href={{ link.text }} target="_blank"> {{ link.title }}</a></h4>
             <div class="col-12">
-                <p><strong>текст ссылки: </strong><a href={{link.text}} target="_blank" class="link"> {{link.text}}</a>
-                <br><small>добавлена: {{ link.created_date }}&nbsp;&nbsp;&nbsp;</small></p>
-                <a href="{% url 'edit' link.pk %}" style="padding-right: 2rem;"><i class="fas fa-pencil-alt"></i> Редактировать</a>
-                <a href="{% url 'remove' link.pk %}"><i class="far fa-trash-alt"></i> Удалить</a>
+                <p><strong>text: </strong><a href={{link.text}} target="_blank" class="link"> {{link.text}}</a>
+                <br><small>created: {{ link.created_date }}&nbsp;&nbsp;&nbsp;</small></p>
+                <a href="{% url 'edit' link.pk %}" style="padding-right: 2rem;"><i class="fas fa-pencil-alt"></i> Edit</a>
+                <a href="{% url 'remove' link.pk %}"><i class="far fa-trash-alt"></i> Remove</a>
             </div>
                 <hr>
             {% endfor %}
@@ -25,7 +25,7 @@
 </div>
     <nav class="navbar navbar-dark text-center bg-light fixed-bottom " id="bottombar">
     <div class="container-fluid">
-        <a href="{% url 'userpage' %}" class="back-link"><i class="far fa-address-book"></i><b> Вернуться в аккаунт</b></a>
+        <a href="{% url 'userpage' %}" class="back-link"><i class="far fa-address-book"></i><b> Go to Account</b></a>
     </div>
 </nav>
 {% endblock %}

@@ -9,9 +9,9 @@ class LinkForm(forms.ModelForm):
         model = Link
         fields = ('title', 'text', 'taglist')
         labels = {
-            'title': 'Заголовок',
-            'text': 'Адрес',
-            'taglist': 'Ключевые слова (разделить пробелом)',
+            'title': 'Title',
+            'text': 'Link address',
+            'taglist': 'keywords (separated by spaces)',
         }
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
@@ -39,9 +39,9 @@ class LoginForm(forms.Form):
 
 
 class SignUpForm(UserCreationForm):
-    first_name = forms.CharField(max_length=30, label='Имя', required=False, help_text='Необязательное поле')
-    last_name = forms.CharField(max_length=30, label='Фамилия', required=False, help_text='Необязательное поле')
-    email = forms.EmailField(max_length=254, help_text='Обязательное для заполнения поле')
+    first_name = forms.CharField(max_length=30, label='Name', required=False, help_text='Not required')
+    last_name = forms.CharField(max_length=30, label='Surname', required=False, help_text='Not required')
+    email = forms.EmailField(max_length=254, help_text='Required field')
 
     class Meta:
         model = User

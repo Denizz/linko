@@ -14,7 +14,7 @@
                         {{ form.as_p }}
                         </div>
                     <div class="col-md-4 col-xs-12 col-ld-12 text-left">
-                    <button type="submit" class="btn btn-primary submit-button">поиск</button>
+                    <button type="submit" class="btn btn-primary submit-button">search</button>
                                         </div>
                         </form>
                     </div>
@@ -22,28 +22,28 @@
                 </div>
                 <hr>
                 <br>
-                <h4>Ключевые слова:</h4>
+                <h4>Tags:</h4>
                 {% for key,value  in links.items %}
                 <a href="{% url 'tagview' key %}">{{ key }} ({{ value }}), </a>
                 {% endfor %}
                 <br>
-                <a href="{% url 'list' %}"><h4>Показать все сохраненные линки ({{total}})</h4></a>
+                <a href="{% url 'list' %}"><h4>Show all links ({{total}})</h4></a>
             </div>
             <div class="col-sm-6">
                 <br>
-                <h3>Добро пожаловать, {{user}}!</h3>
-                <a href="{% url 'add' %}" class="link"><i class="fas fa-plus"></i> Добавить линк</a>
+                <h3>Welcome, {{user}}!</h3>
+                <a href="{% url 'add' %}" class="link"><i class="fas fa-plus"></i> Add a link</a>
                 <hr>
                 {% if not lastfive %}
-                <p class="lead">Похоже, что у вас еще нет ни одного сохраненного линка</p>
+                <p class="lead">No links yet. Click on <a href="{% url 'add' %}" class="link"><i class="fas fa-plus"></i></a> icon to add a link.</p>
                 {% endif %}
                 {% for lf in lastfive %}
             <div class="col-md-auto">
                 <h4 class="h4-darkgrey"><a href={{ lf.text }} target="_blank"> {{ lf.title }}</a></h4>
-                    <div class="col-12"><p><strong>текст ссылки: </strong><a href={{lf.text}} target="_blank"> {{lf.text}}</a>
-                    <br><small>добавлена: {{ lf.created_date }}&nbsp;&nbsp;&nbsp;</small></p>
-                    <a href="{% url 'edit' lf.pk %}" style="padding-right: 2rem;"><i class="fas fa-pencil-alt"></i> Редактировать</a>
-                    <a href="{% url 'remove' lf.pk %}"><i class="far fa-trash-alt"></i> Удалить</a>
+                    <div class="col-12"><p><strong>text: </strong><a href={{lf.text}} target="_blank"> {{lf.text}}</a>
+                    <br><small>created: {{ lf.created_date }}&nbsp;&nbsp;&nbsp;</small></p>
+                    <a href="{% url 'edit' lf.pk %}" style="padding-right: 2rem;"><i class="fas fa-pencil-alt"></i> Edit</a>
+                    <a href="{% url 'remove' lf.pk %}"><i class="far fa-trash-alt"></i> Remove</a>
                     </div>
             <hr>
         </div>
@@ -51,12 +51,12 @@
     <br>
 
                 {% else %}
-                <h3>Зарегистрируйтесь, чтобы продолжить</h3>
-                <a href="{% url 'signup' %}">Зарегистрироваться</a>
-                <h2>Или войдите, используя свой логин или пароль</h2>
+                <h3>Sign Up to create new account</h3>
+                <a href="{% url 'signup' %}">Sign Up</a>
+                <h2>Or Log In</h2>
                 <form method="POST" action="{% url 'login' %}"  class="login-form">{% csrf_token %}
                     {{ form.as_p }}
-                    <button type="submit" class="login btn btn-default">Войти</button>
+                    <button type="submit" class="login btn btn-default">Log In</button>
                 </form>
             </div>
             <div class="col-sm-2"></div>

@@ -4,12 +4,12 @@
 <div class="container-fluid">
     <div class="row padding">
         <div class="col-12">
-    <h2>Регистрация нового пользователя</h2>
+    <h2>Sign Up new user</h2>
     <div class="mc-field-group form-control">
         <form method="post">
             {% csrf_token %}
             {{ form|crispy }}
-            <button type="submit" class="button btn btn-danger btn-lg">Создать</button>
+            <button type="submit" class="button btn btn-danger btn-lg">Create</button>
         </form>
     </div>
     </div>

@@ -8,14 +8,14 @@
             <div class="col-sm-4" style="padding-top: 2rem; ">
                 {% if user.is_authenticated %}
                 <br>
-                <h5>Добро пожаловать, {{user}}!</h5>
-                <a class="lead" href="{% url 'userpage' %}"><i class="far fa-address-book"></i> Перейти в акаунт</a>
+                <h5>Welcome, {{user}}!</h5>
+                <a class="lead" href="{% url 'userpage' %}"><i class="far fa-address-book"></i> Go to account</a>
                 {% else %}
-                <h4>Зарегистрируйтесь, чтобы продолжить</h4>
-                <a href="{% url 'signup' %}"><i class="fas fa-user-plus"></i> Зарегистрироваться</a>
+                <h4>Sign Up to create new account</h4>
+                <a href="{% url 'signup' %}"><i class="fas fa-user-plus"></i> Sign Up</a>
                 <hr>
-                <h5>Или войдите, используя свой логин или пароль</h5>
-                <a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Войти</a>
+                <h5>Or Log In</h5>
+                <a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Log In</a>
                 {% endif %}
             </div>
         </div>
@@ -28,7 +28,7 @@
             <div class="navbar-inner">
                 <div class="container">
                     <p>
-                        Created on Django <i class="fas fa-code"></i>
+                        Created on Django, 2019  <i class="fas fa-code"></i>
                     </p>
                 </div>
             </div>
